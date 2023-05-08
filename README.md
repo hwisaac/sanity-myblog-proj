@@ -1,9 +1,46 @@
-# Sanity Clean Content Studio
+# sanity 를 이용한 블로그 사이트 백엔드 만들기
 
-Congratulations, you have now installed the Sanity Content Studio, an open source real-time content editing environment connected to the Sanity backend.
+[배포](https://nextjs-myblog-proj.vercel.app/)
 
-Now you can do the following things:
+## Schema
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+```ts
+interface IPost = {
+  title: string;
+  description: string;
+  username: string;
+  createdAt: string;
+  image: string;
+  comments: number;
+  tags: string[]
+  postId: string;
+}
+
+type IPosts = IPost[];
+
+interface IComment {
+  username: string;
+  email: string;
+  password: string;
+  content: string;
+  createdAt: string;
+}
+
+interface IPostData {
+  author: IUser;
+  title: string;
+  createdAt: string;
+  content: string;
+  tags: string[];
+  comments: IComment[];
+  description: string;
+}
+
+interface IUser {
+  username: string;
+  name: string;
+  email: string;
+  image: string;
+  posts: IPost[]
+}
+```
