@@ -50,8 +50,8 @@ export default {
           type: 'document',
           fields: [
             {
-              title: 'Username',
-              name: 'username',
+              title: 'Name',
+              name: 'name',
               type: 'string',
             },
             {
@@ -77,7 +77,7 @@ export default {
   preview: {
     select: {
       title: 'description',
-      subtitle: 'author.username',
+      subtitle: 'author.name',
     },
   },
   prepare(selection) {

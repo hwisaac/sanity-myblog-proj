@@ -8,7 +8,7 @@
 interface IPost = {
   title: string;
   description: string;
-  username: string;
+  name: string;
   createdAt: string;
   image: string;
   comments: number;
@@ -19,7 +19,7 @@ interface IPost = {
 type IPosts = IPost[];
 
 interface IComment {
-  username: string;
+  name: string;
   email: string;
   password: string;
   content: string;
@@ -37,7 +37,6 @@ interface IPostData {
 }
 
 interface IUser {
-  username: string;
   name: string;
   email: string;
   image: string;
