@@ -19,6 +19,12 @@ export default {
       type: 'string',
     },
     {
+      title: 'Slug',
+      name: 'slug',
+      type: 'string',
+    },
+
+    {
       title: 'Content',
       name: 'content',
       type: 'text',
@@ -81,7 +87,7 @@ export default {
   ],
   preview: {
     select: {
-      title: 'description',
+      title: 'title',
       subtitle: 'author.name',
     },
   },
