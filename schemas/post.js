@@ -40,6 +40,11 @@ export default {
       validation: (Rule) => Rule.unique(),
     },
     {
+      title: 'Thumbnail',
+      name: 'thumbnail',
+      type: 'image',
+    },
+    {
       title: 'Comments',
       name: 'comments',
       type: 'array',

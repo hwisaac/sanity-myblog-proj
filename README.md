@@ -5,15 +5,28 @@
 ## Schema
 
 ```ts
-interface IPost = {
+interface IPost {
   title: string;
   description: string;
   name: string;
-  createdAt: string;
   image: string;
-  comments: number;
   tags: string[]
   postId: string;
+  createdAt: string;
+  updatedAt: string;
+  comments: IComment[];
+}
+
+interface IPostData {
+  author: IUser;
+  title: string;
+  image: string;
+  content: string;
+  tags: string[];
+  postId: string;
+  createdAt: string;
+  updatedAt: string;
+  comments: IComment[];
 }
 
 type IPosts = IPost[];
@@ -26,15 +39,7 @@ interface IComment {
   createdAt: string;
 }
 
-interface IPostData {
-  author: IUser;
-  title: string;
-  createdAt: string;
-  content: string;
-  tags: string[];
-  comments: IComment[];
-  description: string;
-}
+
 
 interface IUser {
   name: string;
