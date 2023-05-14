@@ -5,46 +5,49 @@
 ## Schema
 
 ```ts
-interface IPost {
+export interface IPost {
   title: string;
+  slug: string;
+  thumbnail: string | null;
   description: string;
-  name: string;
-  image: string;
-  tags: string[]
+  tags: string[];
   postId: string;
   createdAt: string;
   updatedAt: string;
-  comments: IComment[];
+  commentsLength: number;
 }
 
-interface IPostData {
-  author: IUser;
+type IPosts = IPost[];
+
+export interface IPostDetail {
+  author: {
+    name: string;
+    email: string;
+    image: string;
+  };
   title: string;
-  image: string;
-  content: string;
+  slug: string;
+  thumbnail: string;
   tags: string[];
   postId: string;
   createdAt: string;
   updatedAt: string;
   comments: IComment[];
+  content: string;
 }
 
-type IPosts = IPost[];
-
-interface IComment {
+export interface IComment {
   name: string;
   email: string;
   password: string;
   content: string;
+  _key: string;
   createdAt: string;
 }
-
-
 
 interface IUser {
   name: string;
   email: string;
   image: string;
-  posts: IPost[]
 }
 ```

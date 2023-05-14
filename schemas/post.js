@@ -80,6 +80,12 @@ export default {
               name: 'content',
               type: 'string',
             },
+            {
+              title: 'Created At',
+              name: 'createdAt',
+              type: 'datetime',
+              initialValue: () => new Date().toISOString(),
+            },
           ],
         },
       ],
