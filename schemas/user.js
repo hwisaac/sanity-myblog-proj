@@ -37,8 +37,8 @@ export default {
   ],
   preview: {
     select: {
-      title: 'name',
-      subtitle: 'email',
+      title: 'email',
+      subtitle: 'name',
     },
   },
 }

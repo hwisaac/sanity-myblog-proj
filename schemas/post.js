@@ -46,8 +46,8 @@ export default {
       validation: (Rule) => Rule.unique(),
     },
     {
-      title: 'Thumbnail',
-      name: 'thumbnail',
+      title: 'PostImage',
+      name: 'postImage',
       type: 'image',
     },
     {
@@ -63,11 +63,6 @@ export default {
             {
               title: 'Name',
               name: 'name',
-              type: 'string',
-            },
-            {
-              title: 'Email',
-              name: 'email',
               type: 'string',
             },
             {
